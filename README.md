@@ -7,10 +7,10 @@ Please come back and visit around May 12th, 2012.
 
 ### Features and Additions Include:
 
-* *Node.js* - Developed with Version 0.6.13 on Ubuntu 11.04
-* *Session Store* - [session.js](https://github.com/Marak/session.js)
-* *Key/Value Store* - [node-dirty](https://github.com/felixge/node-dirty)
-* *Authentication* - [OpenID for node.js](https://github.com/havard/node-openid)
+* **Node.js** - Developed with Version 0.6.13 on Ubuntu 11.04
+* **Session Store** - [session.js](https://github.com/Marak/session.js)
+* **Key/Value Store** - [node-dirty](https://github.com/felixge/node-dirty)
+* **Authentication** - [OpenID for node.js](https://github.com/havard/node-openid)
 
 ### Functionality Includes:
 
@@ -20,6 +20,5 @@ Please come back and visit around May 12th, 2012.
 
 ------
 
-Libby Baldwin
-[Mobile Developer Solutions](http://www.mobiledevelopersolutions.com)
+Libby Baldwin, [Mobile Developer Solutions](http://www.mobiledevelopersolutions.com)
 
