@@ -1,4 +1,4 @@
-workspace/*
+workspace/shared-items/*
 connection.db
 shareid.db
 userid.db
