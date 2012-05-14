@@ -54,10 +54,12 @@ exports.getSharedItems = function (user, callback) {
                 } else {
                     callback({ success : true, list : returnData });
                 }
+            } else if (returnData.length === 30) {
+                callback({ success : true, list : returnData });
             }
         };
             
-        var checkForIndex = function(f) {
+        var selectShared = function(f) {
             if (f.indexOf(shareId) !== 0) {
                 //console.log("shared dir shareId=" + shareId + ": file = " + f);
                 fs.readFile(sharedBase + '/' + f, 'utf8', function (err, data) {
@@ -67,7 +69,8 @@ exports.getSharedItems = function (user, callback) {
                     }
                     var item = JSON.parse(data);
                     //console.log("readFile item.scancode: " + item.scancode);
-                    returnData.push({ item : item.scancode, loc : item.loc, // time : item.time,
+                    // We are not sharing timestamp of shared items. // time : item.time,
+                    returnData.push({ item : item.scancode, loc : item.loc,
                                       rating: item.rating, comment : item.comment });
                     registerDone();
                 });
@@ -81,13 +84,13 @@ exports.getSharedItems = function (user, callback) {
                 console.log('Shared directory read error ' + sharedBase);
                 throw err;
             }
-            var i;
+            var i, count;
             callbackCountdown = files.length;
             if (callbackCountdown === 0) {
-                callback({ success : false, error : 'No projects found.' });
+                callback({ success : false, error : 'No Shared Items found.' });
             } else {
                 for (i = 0; i < files.length; i++) {
-                    checkForIndex(files[i]);
+                    selectShared(files[i]);
                 }
             }
         });

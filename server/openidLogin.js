@@ -96,10 +96,8 @@ exports.authenticate = function(res, query) {
 
 exports.verify = function(req, res) {
     // Verify identity assertion
-    // NOTE: Passing just the URL is also possible
 
-    // MDS
-//    console.log(".verify: req.url = " + req.url);
+    // console.log(".verify: req.url = " + req.url);
     
     relyingParty.verifyAssertion(req, function(error, result) {
 
@@ -120,7 +118,6 @@ exports.verify = function(req, res) {
                 // register from desktop will never be called
                 
                 var userid = useridDb.register(result.claimedIdentifier, req.session.id, result.email);
-//                var userid = useridDb.getOrPreRegister(result.claimedIdentifier, req.session.id, result.email);
                 
                 var location;
                 if (userid) {
