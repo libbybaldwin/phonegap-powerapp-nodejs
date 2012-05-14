@@ -1,5 +1,4 @@
-workspace/shared-items/*
 connection.db
-shareid.db
+sharedid.db
 userid.db
 

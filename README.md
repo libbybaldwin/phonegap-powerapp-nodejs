@@ -25,7 +25,7 @@ or Stand-alone Demo of Node.js Server
 * To run server:
   * **$ cd install_dir**
   * **$ node server/server.js**
-* See **install_dir/readme.txt** for further instructions
+* See **install_dir/readme.server.txt** for further instructions
 
 ------
 
