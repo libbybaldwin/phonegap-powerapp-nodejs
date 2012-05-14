@@ -1,7 +1,6 @@
 // Manage the workspace location
 var fs = require('fs');
 
-//var workspaceRoot = "/Users/paulb/aw5/";
 var workspaceRoot = "./workspace/";
 
 exports.initWorkspace = function(u) {   // TODO make async
