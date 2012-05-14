@@ -1,0 +1,5 @@
+workspace/*
+connection.db
+shareid.db
+userid.db
+
