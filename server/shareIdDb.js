@@ -26,7 +26,6 @@ db.on('load', function() {
 exports.getShareId = function(user) {
     var shareId = db.get(user);
     if (!shareId) {
-        console.log("no getShareId for user: " + user);
         return 0;
     }
     //console.log("getShareId user: " + user + " shareId: " + shareId);
@@ -36,7 +35,8 @@ exports.getShareId = function(user) {
 exports.getSharedItems = function (user, callback) {
     var shareId = exports.getShareId(user);
     if (!shareId) {
-        console.log("getSharedItems failed: user: " + user + " is not in sharedIdDb");
+        //console.log("getSharedItems failed: user: " + user + " is not in sharedIdDb");
+        console.log("getSharedItems failed: user is not in sharedIdDb");
         callback({success : false});
         return;
     } else {
