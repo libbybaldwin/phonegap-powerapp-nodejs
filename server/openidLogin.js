@@ -72,9 +72,11 @@ exports.authenticate = function(res, query) {
     relyingParty.authenticate(identifier, false, function(error, authUrl) {
 //        console.log('authUrl ' + authUrl);
         if (error) {
+            console.log('authenticate 1 error: ' + error);
             res.writeHead(200);
             res.end('Authentication failed: ' + error);
         } else if (!authUrl) {
+            console.log('authenticate 2 error: no authUrl');
             res.writeHead(200);
             res.end('Authentication failed');
         } else {
